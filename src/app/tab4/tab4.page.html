@@ -1,0 +1,32 @@
+
+  <ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login">
+      <div>
+      <ion-item>
+        <ion-label >Email:</ion-label>
+        <ion-input [(ngModel)] = "user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label > Senha:</ion-label>
+        <ion-input [(ngModel)] = "password" type="password"> </ion-input>
+      </ion-item>
+    </div>
+    <div class="buttonLogin">
+      <ion-button (click) = "login()">Login</ion-button>
+    </div>
+  </div>
+
+  <ion-icon name="diamond-outline" class="teste"></ion-icon>
+
+   
+    
+ 
+</ion-content>
+
+

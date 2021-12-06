@@ -1,0 +1,25 @@
+
+.login{
+   margin: 0 auto;
+    width: 80%;
+    margin-top: 30%;
+   border: 1px solid grey;
+   padding: 20px;
+   border-radius: 5px;
+   background-color: rgba(128, 128, 128, 0.295);
+  .buttonLogin{
+     text-align: center;
+     margin-top: 5px;
+  }
+}
+
+.teste{
+   margin-top: 20px;
+   position: relative;
+   animation: mymove 1s infinite;
+   
+}
+@keyframes mymove {
+   0% {left: 0%;}
+   100% {left: 100%;}
+ }

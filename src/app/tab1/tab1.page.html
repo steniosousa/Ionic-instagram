@@ -1,17 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      {{nomes.nome}}  
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-card *ngFor = "let card of cards">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      <ion-card-header>
+        <h1 (click) ="ir()">ir</h1>
+        <ion-card-subtitle>{{card.horario}}</ion-card-subtitle>
+        <ion-card-title>{{card.titulo}}</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <ion-img   src="{{card.foto}}"></ion-img>
+       
+      </ion-card-content>
+  
+    </ion-card>
+
+    
 </ion-content>
