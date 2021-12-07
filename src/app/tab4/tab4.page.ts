@@ -18,7 +18,6 @@ export class Tab4Page implements OnInit {
   }
 
   login(){
-    console.log(this.user, this.password);   
     if(this.user == "" && this.password == ""){
       this.navCtrl.navigateForward("/tabs/tab4");
     }else{

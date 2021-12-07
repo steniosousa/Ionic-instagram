@@ -6,20 +6,41 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-    <ion-card *ngFor = "let card of cards">
+  <div [ngClass]="{'none': music }">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+    <ion-textarea [(ngModel)]= "titulo"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">url da imagem</ion-label>
+      <ion-textarea [(ngModel)]= "link"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição da imagem</ion-label>
+      <ion-textarea [(ngModel)]= "description"></ion-textarea>
+    </ion-item>
+    <ion-button class="enviar"(click) = "formular()">enviar</ion-button>
+  </div>
+  
+    <ion-card id="card" *ngFor = "let card of cards">
 
       <ion-card-header>
-        <h1 (click) ="ir()">ir</h1>
-        <ion-card-subtitle>{{card.horario}}</ion-card-subtitle>
         <ion-card-title>{{card.titulo}}</ion-card-title>
+        <ion-icon (click)="apagar(card)"slots="end" name="trash-outline"></ion-icon>
       </ion-card-header>
   
       <ion-card-content>
         <ion-img   src="{{card.foto}}"></ion-img>
-       
+        <ion-card-subtitle>{{card.description}}</ion-card-subtitle>
       </ion-card-content>
-  
     </ion-card>
-
-    
+    <div  class="music" [ngClass]="{'music2': music}" (click) = "trocarPagina()"   > 
+      <ion-icon [ngClass]="{'none': music }" (click) = "music = !music" class="icon" name="musical-notes-outline"></ion-icon> 
+    </div>
+    <div class="progress">
+      <div class="progress2">
+        <ion-label class="label"> Progresso para finalizar a plataforma</ion-label>
+        <ion-progress-bar class="progressFig" type="Indeterminate" buffer="0.2" value="0.2" ></ion-progress-bar>  
+      </div>
+    </div>
 </ion-content>

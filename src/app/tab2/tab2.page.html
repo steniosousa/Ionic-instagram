@@ -1,17 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title>
+        Escute sua música
+      </ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <div  class="content">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-thumbnail>
+        <ion-label>Musica 01</ion-label>
+      </ion-item>
+    </div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+    <div class="player">
+      <ion-icon class="ion-icon" slots="start"name="play-back"></ion-icon>
+      <ion-icon class="ion-icon" name="pause-circle"></ion-icon>
+      <ion-icon class="ion-icon" slots="end"name="play-forward"></ion-icon>
+    </div>
+  </ion-content>
+  
+
+
